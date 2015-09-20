@@ -1,4 +1,4 @@
-class PagesController < ApplicationController
+class LoggedOutController < ApplicationController
   def index
     render :layout => 'bare.html'
   end
@@ -6,9 +6,4 @@ class PagesController < ApplicationController
   def help
     render :layout => 'bare.html'
   end
-
-  def home
-
-  end
-
 end
