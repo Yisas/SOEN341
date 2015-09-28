@@ -117,3 +117,27 @@ Processing by LoggedOutController#help as HTML
   Rendered logged_out/help.html.erb within layouts/bare.html (0.6ms)
 Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
   [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+---------------------------------------------
+LoggedOutControllerTest: test_should_get_help
+---------------------------------------------
+Processing by LoggedOutController#help as HTML
+  Rendered logged_out/help.html.erb within layouts/bare.html (1.8ms)
+Completed 200 OK in 301ms (Views: 300.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------------
+LoggedOutControllerTest: test_should_get_index
+----------------------------------------------
+Processing by LoggedOutController#index as HTML
+  Rendered logged_out/index.html.erb within layouts/bare.html (0.6ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+StudentsControllerTest: test_should_get_home
+--------------------------------------------
+Processing by StudentsController#home as HTML
+  Rendered students/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
