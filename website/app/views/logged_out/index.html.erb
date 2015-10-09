@@ -1,0 +1,24 @@
+<header>
+  <h1>Welcome to Skynet</h1>
+</header>
+
+<h3>Please login</h3>
+
+<div class="container">
+  <label for="user_type">Type: </label>
+  <select id="user_type">
+    <option value="student">Student</option>
+    <option value="tutor">Tutor</option>
+    <option value="professor">Professor</option>
+  </select><br/><br/>
+
+  <label for="id">ID: </label>
+  <input type="text" id="id" name="id"><br/><br/>
+
+  <label for="password">Password: </label>
+  <input type="password" id="password" name="password"><br/><br/>
+
+  <input type="submit" value="Login">
+</div><br/><br/>
+
+<%= link_to 'Help', '/help.html' %>
