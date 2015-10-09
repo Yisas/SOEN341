@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-     <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
-     <%= csrf_meta_tags %>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Skynet</title>
+    <title><%= full_title(yield(:title)) %></title>
 
     <meta name="description" content="Source code generated using layoutit.com">
     <meta name="author" content="LayoutIt!">
 
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+     <%= javascript_include_tag 'application' %>
+     <%= csrf_meta_tags %>
   </head>
   <body>
 
@@ -36,33 +36,28 @@
                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Consult Skynet<strong class="caret"></strong></a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="#">Action</a>
+                  <a href="#">Add Courses</a>
                 </li>
                 <li>
-                  <a href="#">Another action</a>
+                  <a href="#">Remove Courses</a>
                 </li>
                 <li>
-                  <a href="#">Something else here</a>
+                  <a href="#">View My Schedule</a>
                 </li>
                 <li class="divider">
                 </li>
                 <li>
-                  <a href="#">Separated link</a>
-                </li>
-                <li class="divider">
-                </li>
-                <li>
-                  <a href="#">One more separated link</a>
+                  <a href="#">Scheduler View</a>
                 </li>
               </ul>
             </li>
           </ul>
           <form class="navbar-form navbar-left" role="search">
             <div class="form-group">
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" value="Course Search">
             </div> 
             <button type="submit" class="btn btn-default">
-              Submit
+              Search
             </button>
           </form>
           <ul class="nav navbar-nav navbar-right">
@@ -73,18 +68,13 @@
                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Assets<strong class="caret"></strong></a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="#">Action</a>
+                  <a href="#">Undergraduate Calendar</a>
                 </li>
                 <li>
-                  <a href="#">Another action</a>
+                  <a href="#">Course Registration Guide</a>
                 </li>
                 <li>
-                  <a href="#">Something else here</a>
-                </li>
-                <li class="divider">
-                </li>
-                <li>
-                  <a href="#">Separated link</a>
+                  <a href="#">Tuition Cost Estimation</a>
                 </li>
               </ul>
             </li>
@@ -103,7 +93,7 @@
         </ol>
         <div class="carousel-inner">
           <div class="item active">
-            <img alt="Carousel Bootstrap First" src="https://www.concordia.ca/content/shared/en/news/main/stories/2015/10/01/monday-october-12-whats-open-whats-closed-at-concordia-thanksgiving/_jcr_content/parsys/image.img.jpg/1444163547578.jpg">
+            <img alt="Carousel Bootstrap First" src="https://www.concordia.ca/content/shared/en/news/main/stories/2015/10/01/monday-october-12-whats-open-whats-closed-at-concordia-thanksgiving/_jcr_content/parsys/image.img.jpg/1444163547578.jpg" >
             <div class="carousel-caption">
               <h4>
                 Your schedule, engineered just for you!
@@ -111,24 +101,21 @@
             </div>
           </div>
           <div class="item">
-            <img alt="Carousel Bootstrap Second" src="http://lorempixel.com/output/sports-q-c-1600-500-2.jpg">
+            <img alt="Carousel Bootstrap Second" src="http://linguistech.ca/display910">
             <div class="carousel-caption">
               <h4>
-                Second Thumbnail label
+                We help you to prepare your course sequence, ensuring you graduate when you want to, how you want to.
               </h4>
-              <p>
-                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-              </p>
             </div>
           </div>
           <div class="item">
             <img alt="Carousel Bootstrap Third" src="http://lorempixel.com/output/sports-q-c-1600-500-3.jpg">
             <div class="carousel-caption">
               <h4>
-                Third Thumbnail label
+                Something else goes here
               </h4>
               <p>
-                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                Banners need to be properly sized
               </p>
             </div>
           </div>
