@@ -1,12 +1,11 @@
-class User
-  attr_accessor :name, :email
+class Student
+  attr_accessor :name, :studentID , :password
 
   def initialize(attributes = {})
     @name  = attributes[:name]
-    @email = attributes[:email]
+    @studentID  = attributes[:studentID]
+    @password = attributes[:password]
   end
 
-  def formatted_email
-    "#{@name} <#{@email}>"
-  end
+
 end

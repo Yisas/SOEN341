@@ -17348,3 +17348,76 @@ Started GET "/login" for ::1 at 2015-11-03 11:26:39 -0500
 Processing by StaticPagesController#login as HTML
   Rendered static_pages/login.html.erb within layouts/application (1.0ms)
 Completed 200 OK in 397ms (Views: 396.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 11:28:28 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 692ms (Views: 670.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 11:28:43 -0500
+Processing by StaticPagesController#login as HTML
+  Rendered static_pages/login.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 380ms (Views: 379.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 11:29:15 -0500
+Processing by StaticPagesController#login as HTML
+  Rendered static_pages/login.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 383ms (Views: 382.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 11:30:31 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 466ms (Views: 465.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 11:31:07 -0500
+Processing by StaticPagesController#login as HTML
+  Rendered static_pages/login.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 442ms (Views: 426.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 11:31:10 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 428ms (Views: 428.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (109.2ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (62.4ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateStudents (20151103163857)
+  [1m[35m (15.6ms)[0m  CREATE TABLE `students` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `studentID` int(11), `password` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20151103163857')
+  [1m[36m (15.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (62.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'myapp_test'
+  AND fk.table_name = 'students'
+[0m
+  [1m[35m (0.0ms)[0m  SHOW CREATE TABLE `students`
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.0ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'myapp_test'
+  AND fk.table_name = 'students'
+[0m
+  [1m[35m (0.0ms)[0m  SHOW CREATE TABLE `students`
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO `students` (`name`, `studentID`, `password`, `created_at`, `updated_at`) VALUES ('Jesus', 27174276, 'password', '2015-11-03 17:57:29', '2015-11-03 17:57:29')[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mStudent Load (15.6ms)[0m  [1mSELECT  `students`.* FROM `students` WHERE `students`.`name` = 'Jesus' LIMIT 1[0m
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  `students`.* FROM `students` WHERE `students`.`name` = 'Jes*' LIMIT 1
