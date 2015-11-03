@@ -14,4 +14,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+div.relative-to-header {
+	position: relative;
+   top: 50px;
+}
+
 
