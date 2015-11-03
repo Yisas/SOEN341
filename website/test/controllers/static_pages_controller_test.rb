@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class LoggedOutControllerTest < ActionController::TestCase
-  test "should get index" do
-    get :index
+class StaticPagesControllerTest < ActionController::TestCase
+  test "should get home" do
+    get :home
     assert_response :success
   end
 

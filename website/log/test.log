@@ -141,3 +141,24 @@ Processing by StudentsController#home as HTML
   Rendered students/home.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
   [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+StudentsControllerTest: test_should_get_home
+--------------------------------------------
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (12714.0ms)
+Completed 200 OK in 12744ms (Views: 12744.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/help.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  ROLLBACK
