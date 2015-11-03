@@ -16217,3 +16217,30 @@ Completed 200 OK in 1072ms (Views: 1051.1ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/assets/banner%201.jpg" for ::1 at 2015-11-03 07:48:44 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 08:02:09 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (637.0ms)
+Completed 200 OK in 1076ms (Views: 1055.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner%201.jpg" for ::1 at 2015-11-03 08:02:11 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 08:04:30 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (644.0ms)
+Completed 200 OK in 1091ms (Views: 1070.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner%201.jpg" for ::1 at 2015-11-03 08:04:32 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 08:04:36 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (370.0ms)
+Completed 200 OK in 754ms (Views: 754.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner%201.jpg" for ::1 at 2015-11-03 08:04:36 -0500
