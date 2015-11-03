@@ -1,4 +1,4 @@
 class StudentsController < ApplicationController
-  def home
+  def login
   end
 end

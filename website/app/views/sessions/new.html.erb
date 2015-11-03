@@ -1,0 +1,19 @@
+<body>
+		 <%= form_for(:session, url: login_path) do |f| %>
+					<div class="form-group">
+						 
+							 <%= f.label :studentID, 'Student ID' %>
+							 <%= f.number_field :studentID, class: 'form-control' %>
+							 
+						
+					</div>
+					<div class="form-group">
+						 
+						<label for="inputPassword">
+							Password
+						</label>
+						<input type="password" class="form-control" id="inputPassword" />
+					</div>
+					  <%= f.submit "Log in", class: "btn btn-default" %>
+			<% end %>
+</body>
