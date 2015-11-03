@@ -11,11 +11,18 @@
 default: &default
   adapter: mysql2
   encoding: utf8
+  database: Skynet_DB
   pool: 5
+<<<<<<< HEAD
   username: root
   password: admin
+=======
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+>>>>>>> b0f4bd4166fbd7547eb0baac61603248cebb61f1
   host: localhost
   socket: /var/run/mysqld/mysqld.sock
+
 
 development:
   <<: *default
