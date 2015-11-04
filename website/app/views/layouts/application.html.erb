@@ -6,79 +6,84 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-        <% flash.each do |message_type, message| %>
-        <div class="alert alert-<%= message_type %>"  style="position: relative; top: 50px;"><%= message %></div>
-      <% end %>
+  <% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"  style="position: relative; top: 50px;"><%= message %></div>
+  <% end %>
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-               <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-            </button>   <%= link_to "Skynet", root_path, :class=>"navbar-brand" %>
-          </div>
-          
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li class="active">
-                <%= link_to "Login", login_path %>
-              </li>
-              <li class="dropdown">
-                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Consult Skynet<strong class="caret"></strong></a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="#">Add Courses</a>
-                  </li>
-                  <li>
-                    <a href="#">Remove Courses</a>
-                  </li>
-                  <li>
-                    <a href="#">View My Schedule</a>
-                  </li>
-                  <li class="divider">
-                  </li>
-                  <li>
-                    <a href="#">Scheduler View</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <form class="navbar-form navbar-left" role="search">
-              <div class="form-group">
-                <input type="text" class="form-control" value="Course Search">
-              </div> 
-              <button type="submit" class="btn btn-default">
-                Search
-              </button>
-            </form>
-            <ul class="nav navbar-nav navbar-right">
-              <li>
-                <a href="#">About</a>
-              </li>
-              <li class="dropdown">
-                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Assets<strong class="caret"></strong></a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="http://www.concordia.ca/content/dam/concordia/offices/registrar/docs/calendar/15-16/UGCalendar15-16.pdf">Undergraduate Calendar</a>
-                  </li>
-                  <li>
-                    <a href="#">Course Registration Guide</a>
-                  </li>
-                  <li>
-                    <a href="#">Tuition Cost Estimation</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          
-        </nav>
-        <div class="relative-to-header">
-    <%= yield %>
-        </div>
-      </div>
-    </div>
+       <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+           <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+         </button>   <%= link_to "Skynet", root_path, :class=>"navbar-brand" %>
+       </div>
+
+       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <%= link_to "Login", login_path %>
+          </li>
+          <li class="dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Consult Skynet<strong class="caret"></strong></a>
+           <ul class="dropdown-menu">
+            <li>
+              <a href="#">Add Courses</a>
+            </li>
+            <li>
+              <a href="#">Remove Courses</a>
+            </li>
+            <li>
+              <a href="#">View My Schedule</a>
+            </li>
+            <li class="divider">
+            </li>
+            <li>
+              <a href="#">Scheduler View</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" value="Course Search">
+        </div> 
+        <button type="submit" class="btn btn-default">
+          Search
+        </button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li class="dropdown">
+         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Assets<strong class="caret"></strong></a>
+         <ul class="dropdown-menu">
+          <li>
+            <a href="http://www.concordia.ca/content/dam/concordia/offices/registrar/docs/calendar/15-16/UGCalendar15-16.pdf">Undergraduate Calendar</a>
+          </li>
+          <li>
+            <a href="#">Course Registration Guide</a>
+          </li>
+          <li>
+            <a href="#">Tuition Cost Estimation</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </div>
+
+</nav>
+<div class="relative-to-header">
+  <%= yield %>
+</div>
+  <div style="position:absolute, bottom:0">
+    <p>Hey<p>
+      <%= debug(params) if Rails.env.development? %>
+    </div>
+</div>
+</div>
+</div>
+
 </body>
 </html>

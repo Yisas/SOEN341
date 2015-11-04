@@ -1,20 +1,20 @@
 class Student < ActiveRecord::Base
 	validates(:name, presence: true, uniqueness: true)
 	validates(:password, presence: true)
-	validates(:studentID, presence: true, length: {maximum: 8}, uniqueness: true)
+	validates(:studentID, presence: true, uniqueness: true)
 
-def authenticate(studentID,password)
-user=Student.find_by_studentID(studentID)
+	def authenticate(studentID,password)
+		user=Student.find_by_studentID(studentID)
 
-if user && user.password==password 
+		if user && user.password==password 
 
-	return true
+			return true
 
-else 
+		else 
 
-	return false
+			return false
 
-end
+		end
 
-end
+	end
 end

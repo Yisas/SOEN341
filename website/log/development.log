@@ -18561,3 +18561,1156 @@ Started GET "/login" for ::1 at 2015-11-03 14:54:55 -0500
 Processing by SessionsController#new as HTML
   Rendered sessions/new.html.erb within layouts/application (0.0ms)
 Completed 200 OK in 395ms (Views: 395.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:19:26 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (93.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 1072ms (Views: 1050.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 22:19:31 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (108.0ms)
+Completed 200 OK in 496ms (Views: 496.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-03 22:19:38 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FklNx2ZbRR1k5pNsdwI3dOvryPz/DX2eSyNP4Ok8YUodPiHRqkAc+TE3i9lASSXo1xFpru6u8QVV5ikJwT5VQg==", "session"=>{"studentID"=>"12321"}, "commit"=>"Log in"}
+  [1m[35mStudent Load (1.0ms)[0m  SELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 12321 LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 447ms (Views: 383.0ms | ActiveRecord: 38.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:19:40 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 388ms (Views: 387.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 22:19:41 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 383ms (Views: 383.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-03 22:19:50 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zuULrJPuflrtafoyx+TPDQUknNdSHz/XIauAIKxrXYXFkme6X/Unvri44ofwr92ROd49hUO8s0w/bubJhGlpjQ==", "session"=>{"studentID"=>"271714276"}, "commit"=>"Log in"}
+  [1m[36mStudent Load (1.0ms)[0m  [1mSELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 271714276 LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 381ms (Views: 377.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-03 22:20:06 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MgGFH/TfiYj+ta17Inir/yUVBTKNd0/MQyo57KWlhbY5dukJOMTQbKtktc4VM7ljGe+kYJzUw1dd718Fjaexvg==", "session"=>{"studentID"=>"27174276"}, "commit"=>"Log in"}
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1[0m  [["studentID", "27174276"]]
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 411ms (Views: 396.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:29:23 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 455ms (Views: 455.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 22:29:25 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 422ms (Views: 422.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:29:27 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 382ms (Views: 381.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 22:29:31 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 369ms (Views: 369.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:30:17 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Sites/soen-341-project/website/app/views/layouts/application.html.erb:83: syntax error, unexpected ',', expecting ')'
+..._buffer.append=( debug(params), html => "position:absolute, ...
+...                               ^):
+  app/views/layouts/application.html.erb:83: syntax error, unexpected ',', expecting ')'
+
+
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (80.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (190.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:30:17 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Sites/soen-341-project/website/app/views/layouts/application.html.erb:83: syntax error, unexpected ',', expecting ')'
+..._buffer.append=( debug(params), html => "position:absolute, ...
+...                               ^):
+  app/views/layouts/application.html.erb:83: syntax error, unexpected ',', expecting ')'
+
+
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (85.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (87.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (195.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:32:07 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Sites/soen-341-project/website/app/views/layouts/application.html.erb:83: syntax error, unexpected ',', expecting ')'
+..._buffer.append=( debug(params), ; :style => "position:absolu...
+...                               ^):
+  app/views/layouts/application.html.erb:83: syntax error, unexpected ',', expecting ')'
+
+
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (85.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (86.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (192.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:32:24 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Sites/soen-341-project/website/app/views/layouts/application.html.erb:83: syntax error, unexpected ',', expecting ')'
+..._buffer.append=( debug(params), :style => "position:absolute...
+...                               ^):
+  app/views/layouts/application.html.erb:83: syntax error, unexpected ',', expecting ')'
+
+
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (85.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (85.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (190.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:33:17 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Sites/soen-341-project/website/app/views/layouts/application.html.erb:83: syntax error, unexpected ',', expecting ')'
+...buffer.append=( (debug(params), :style => "position:absolute...
+...                               ^):
+  app/views/layouts/application.html.erb:83: syntax error, unexpected ',', expecting ')'
+
+
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (86.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (194.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:36:10 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 490ms (Views: 489.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 22:36:16 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 444ms (Views: 443.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 22:37:30 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 455ms (Views: 455.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 22:38:45 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 482ms (Views: 481.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:38:47 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 460ms (Views: 460.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 22:38:48 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 478ms (Views: 478.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 22:39:05 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 474ms (Views: 473.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:39:10 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 434ms (Views: 434.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:39:26 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 451ms (Views: 451.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:39:59 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 440ms (Views: 440.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:40:10 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 451ms (Views: 449.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:42:33 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 447ms (Views: 447.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:42:49 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 446ms (Views: 445.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 22:42:53 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 440ms (Views: 440.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:43:57 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 3084ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Invalid CSS after ".": expected class name, was "."):
+    1: <html>
+    2: <head>
+    3:   <title><%= full_title(yield(:title)) %></title>
+    4:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    5:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    6:   <%= csrf_meta_tags %>
+    7: </head>
+  app/assets/stylesheets/application.scss:28
+  app/views/layouts/application.html.erb:4:in `_app_views_layouts_application_html_erb___225025657_84266844'
+
+
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (92.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (80.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (178.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:44:01 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 881ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Invalid CSS after ".": expected class name, was "."):
+    1: <html>
+    2: <head>
+    3:   <title><%= full_title(yield(:title)) %></title>
+    4:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    5:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    6:   <%= csrf_meta_tags %>
+    7: </head>
+  app/assets/stylesheets/application.scss:28
+  app/views/layouts/application.html.erb:4:in `_app_views_layouts_application_html_erb___225025657_84266844'
+
+
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (80.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (81.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (183.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 22:44:03 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 886ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Invalid CSS after ".": expected class name, was "."):
+    1: <html>
+    2: <head>
+    3:   <title><%= full_title(yield(:title)) %></title>
+    4:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    5:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    6:   <%= csrf_meta_tags %>
+    7: </head>
+  app/assets/stylesheets/application.scss:28
+  app/views/layouts/application.html.erb:4:in `_app_views_layouts_application_html_erb___225025657_84266844'
+
+
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (90.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (10.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (190.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:44:04 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 943ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Invalid CSS after ".": expected class name, was "."):
+    1: <html>
+    2: <head>
+    3:   <title><%= full_title(yield(:title)) %></title>
+    4:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    5:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    6:   <%= csrf_meta_tags %>
+    7: </head>
+  app/assets/stylesheets/application.scss:28
+  app/views/layouts/application.html.erb:4:in `_app_views_layouts_application_html_erb___225025657_84266844'
+
+
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (84.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (79.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (178.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:44:06 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 887ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Invalid CSS after ".": expected class name, was "."):
+    1: <html>
+    2: <head>
+    3:   <title><%= full_title(yield(:title)) %></title>
+    4:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    5:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    6:   <%= csrf_meta_tags %>
+    7: </head>
+  app/assets/stylesheets/application.scss:28
+  app/views/layouts/application.html.erb:4:in `_app_views_layouts_application_html_erb___225025657_84266844'
+
+
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (80.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (70.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (172.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:44:07 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 926ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Invalid CSS after ".": expected class name, was "."):
+    1: <html>
+    2: <head>
+    3:   <title><%= full_title(yield(:title)) %></title>
+    4:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    5:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    6:   <%= csrf_meta_tags %>
+    7: </head>
+  app/assets/stylesheets/application.scss:28
+  app/views/layouts/application.html.erb:4:in `_app_views_layouts_application_html_erb___225025657_84266844'
+
+
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (84.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (84.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (188.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:44:09 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 980ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Invalid CSS after ".": expected class name, was "."):
+    1: <html>
+    2: <head>
+    3:   <title><%= full_title(yield(:title)) %></title>
+    4:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    5:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    6:   <%= csrf_meta_tags %>
+    7: </head>
+  app/assets/stylesheets/application.scss:28
+  app/views/layouts/application.html.erb:4:in `_app_views_layouts_application_html_erb___225025657_84266844'
+
+
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (85.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (85.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (191.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:44:11 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 896ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Invalid CSS after ".": expected class name, was "."):
+    1: <html>
+    2: <head>
+    3:   <title><%= full_title(yield(:title)) %></title>
+    4:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    5:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    6:   <%= csrf_meta_tags %>
+    7: </head>
+  app/assets/stylesheets/application.scss:28
+  app/views/layouts/application.html.erb:4:in `_app_views_layouts_application_html_erb___225025657_84266844'
+
+
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (80.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (80.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (180.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:45:25 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 962ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Invalid CSS after ".": expected class name, was "."):
+    1: <html>
+    2: <head>
+    3:   <title><%= full_title(yield(:title)) %></title>
+    4:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    5:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    6:   <%= csrf_meta_tags %>
+    7: </head>
+  app/assets/stylesheets/application.scss:28
+  app/views/layouts/application.html.erb:4:in `_app_views_layouts_application_html_erb___225025657_84266844'
+
+
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (85.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (86.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (190.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:45:30 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 948ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Invalid CSS after ".": expected class name, was "."):
+    1: <html>
+    2: <head>
+    3:   <title><%= full_title(yield(:title)) %></title>
+    4:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    5:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    6:   <%= csrf_meta_tags %>
+    7: </head>
+  app/assets/stylesheets/application.scss:28
+  app/views/layouts/application.html.erb:4:in `_app_views_layouts_application_html_erb___225025657_84266844'
+
+
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (83.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (85.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (189.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:45:58 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 943ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Invalid CSS after ".": expected class name, was "."):
+    1: <html>
+    2: <head>
+    3:   <title><%= full_title(yield(:title)) %></title>
+    4:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    5:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    6:   <%= csrf_meta_tags %>
+    7: </head>
+  app/assets/stylesheets/application.scss:28
+  app/views/layouts/application.html.erb:4:in `_app_views_layouts_application_html_erb___225025657_84266844'
+
+
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (86.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (85.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (189.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:46:24 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2790ms (Views: 2789.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-29e73ad098735d86e5d72aa20fe3a472febc1269a0ba4d77d1489256dd38ddc5.css?body=1" for ::1 at 2015-11-03 22:46:27 -0500
+
+
+Started GET "/login" for ::1 at 2015-11-03 22:46:30 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 415ms (Views: 415.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-03 22:46:39 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SNZAVS6pUUsHGUAOuv00JPsoJqs+lV56E3bMlLvehnZDoSxD4rIIr1LIWLuNtia4x9KH+S820uENs6p9k9yyfg==", "session"=>{"studentID"=>"27174276"}, "commit"=>"Log in"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+SyntaxError (C:/Sites/soen-341-project/website/app/models/student.rb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+	validates(:studentID, presence: true uniqueness: true)
+	                                               ^):
+  app/models/student.rb:4: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (86.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (194.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 22:47:26 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 445ms (Views: 444.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-03 22:47:33 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RnKG1lYkHeGZY2ERp/xH73n3dTCI6AnqcZjCC3J4CVJNBerAmj9EBcyyeaSQt1VzRQ3UYplLhXFvXaTiWno9Wg==", "session"=>{"studentID"=>"123123"}, "commit"=>"Log in"}
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 123123 LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 452ms (Views: 439.0ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-03 22:48:08 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dATKui99ycNSiblnQgCzqn+C+UbcAPP3WPOHcg5/hVN/c6as42aQJwdYodJ1S6E2Q3hYFM2jf2xGNuGbJn2xWw==", "session"=>{"studentID"=>"27174276"}, "commit"=>"Log in"}
+  [1m[36mStudent Load (1.0ms)[0m  [1mSELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1  [["studentID", "27174276"]]
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 402ms (Views: 394.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:54:16 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 384ms (Views: 384.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 22:54:18 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 410ms (Views: 410.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:55:47 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 380ms (Views: 379.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 22:55:48 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 383ms (Views: 383.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-03 22:55:54 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DDxgSWegJCds75V15aekARcru3H3e4YN+w2n3hNtee8HSwxfq7t9wzk+jcDS7LadK9EaI+bYCpblyME3O29N5w==", "session"=>{"studentID"=>"123"}, "commit"=>"Log in"}
+  [1m[36mStudent Load (0.0ms)[0m  [1mSELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 123 LIMIT 1[0m
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 5.0ms)
+
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  app/controllers/sessions_controller.rb:7:in `create'
+
+
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (84.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (188.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 22:56:19 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 428ms (Views: 426.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-03 22:56:37 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9P86nkjw/3ntyAMZHf/pSajpFN6FdgAbiFPMLZxAluL/iFaIhOumnbgZG6wqtPvVlBO1jJTVjICWlqrEtEKi6g==", "session"=>{"studentID"=>"27174276"}, "commit"=>"Log in"}
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1[0m  [["studentID", "27174276"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1  [["studentID", "27174276"]]
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 398ms (Views: 390.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-03 22:56:51 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DzcEO6x21ZcwUy3odF01OG/fPEF2GAAghoE79howC6UEQGgtYG2Mc2WCNV1DFiekUyWdE2e7jLuYRF0fMjI/rQ==", "session"=>{"studentID"=>"27174276"}, "commit"=>"Log in"}
+  [1m[36mStudent Load (0.0ms)[0m  [1mSELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1  [["studentID", "27174276"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1[0m  [["studentID", "27174276"]]
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 411ms (Views: 405.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:56:55 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 392ms (Views: 391.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 22:56:56 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 402ms (Views: 402.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-03 22:57:06 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sMkpwLpfKsxrsOR6gHrrMkonbXz+Yx6JUjOkog1d6vC7vkXWdkRzKD5h/M+3Mfmudt3MLu/AkhJM9sJLJV/e+A==", "session"=>{"studentID"=>"27174276"}, "commit"=>"Log in"}
+  [1m[35mStudent Load (1.0ms)[0m  SELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1[0m  [["studentID", "27174276"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1  [["studentID", "27174276"]]
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 409ms (Views: 403.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-03 22:57:30 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HjyyGVo4EFZG8ft3vW3OhhG7S9gsyfBsTpSGRHb/2LgVS94PliNJshMg48KKJtwaLUHqij1qfPdQUeCtXv3ssA==", "session"=>{"studentID"=>"27174276"}, "commit"=>"Log in"}
+  [1m[36mStudent Load (0.0ms)[0m  [1mSELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1  [["studentID", "27174276"]]
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 405ms (Views: 388.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 22:57:43 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 404ms (Views: 403.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-03 22:57:53 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r+CUKbmCOk1WW29Cc+Z9INtQkbyt9G9jVkUwPdZn3eukl/g/dZljqQOKd/dErW+856ow7rxX4/hIgFbU/mXp4w==", "session"=>{"studentID"=>"27174276"}, "commit"=>"Log in"}
+  [1m[36mStudent Load (7.0ms)[0m  [1mSELECT  `students`.* FROM `students` WHERE `students`.`studentID` IS NULL LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 412ms (Views: 393.0ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 22:58:18 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 397ms (Views: 396.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-03 22:58:24 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xRUN5GG6IQ827nACTN/XuGXd9OI+7QUNelfas7c7k8vOYmHyraF462M/aLd7lMUkWSdVsC9OiZZkkrxanzmnww==", "session"=>{"studentID"=>"27174276"}, "commit"=>"Log in"}
+  [1m[35mStudent Load (1.0ms)[0m  SELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1[0m  [["studentID", "27174276"]]
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 403ms (Views: 385.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 22:59:23 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 402ms (Views: 401.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 22:59:24 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 389ms (Views: 388.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-03 22:59:32 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D6OOIDhuuw+yclWIlq7U5zC7G0IJM8TFNHw72TiUfIgE1OI29HXi6+ejTT2h5cZ7DEG6EBiQSF4quV0wEJZIgA==", "session"=>{"studentID"=>"2714276"}, "commit"=>"Log in"}
+  [1m[35mStudent Load (1.0ms)[0m  SELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 2714276 LIMIT 1
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 9.0ms)
+
+NoMethodError (undefined method `studentID' for nil:NilClass):
+  app/controllers/sessions_controller.rb:7:in `create'
+
+
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (86.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (191.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 23:00:58 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 406ms (Views: 405.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-03 23:01:04 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OD2LjcZDgm1psdlcJpvmvNMeI8HxomCMIUZvBnUo7aIzSuebCljbiTxgwekR0PQg7+SCk+AB7Bc/gwnvXSrZqg==", "session"=>{"studentID"=>"27174276"}, "commit"=>"Log in"}
+  [1m[36mStudent Load (0.0ms)[0m  [1mSELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1[0m
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 6.0ms)
+
+NameError (undefined local variable or method `studentID' for #<SessionsController:0x8d89c28>):
+  app/controllers/sessions_controller.rb:7:in `create'
+
+
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (86.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (84.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (193.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 23:01:47 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 388ms (Views: 388.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-03 23:01:53 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Dv9AOMILGgs7t/9mw6C9sJpDOF7NNOH/xBRbtIy+rVUFiCwuDhBD725m59P0668sprmZDNyXbWTa0T1dpLyZXQ==", "session"=>{"studentID"=>"27174276"}, "commit"=>"Log in"}
+  [1m[35mStudent Load (1.0ms)[0m  SELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 9.0ms)
+
+NameError (undefined local variable or method `password' for #<SessionsController:0xb4659b8>):
+  app/controllers/sessions_controller.rb:7:in `create'
+
+
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (85.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (189.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 23:02:21 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 410ms (Views: 409.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-03 23:02:27 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7wL1NELTwYE0vlWkZI9wd8kkADXV43/YgwSqPSUsCtfkdZkijsiYZWFvTRFTxGLr9d6hZ8RA80OdwczUDS4+3w==", "session"=>{"studentID"=>"27174276"}, "commit"=>"Log in"}
+  [1m[36mStudent Load (0.0ms)[0m  [1mSELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1  [["studentID", "27174276"]]
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 414ms (Views: 391.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 23:03:51 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 407ms (Views: 406.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 23:03:52 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 391ms (Views: 391.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-03 23:04:03 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XhuvT37yTd2jChXrEZxklybkFyDwzgwiM88aaaO0aelVbMNZsukUOfbbDV4m13YLGh62cuFtgLktCnyAi7Zd4Q==", "session"=>{"studentID"=>"27174276", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mStudent Load (0.0ms)[0m  [1mSELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1  [["studentID", "27174276"]]
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 402ms (Views: 399.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 23:04:20 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 403ms (Views: 401.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 23:04:21 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 396ms (Views: 396.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-03 23:04:28 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BIeSPye47wM66DurU3sGrtDD9DucbKvGARXf6oGFEwkP8P4p66O25285Ix5kMBQy7DlVaY3PJ10f0LkDqYcnAQ==", "session"=>{"studentID"=>"27174276", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mStudent Load (0.0ms)[0m  [1mSELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1  [["studentID", "27174276"]]
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 404ms (Views: 401.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-03 23:05:06 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XZwprzkUK0KHAMstjMfIU7z/glmLjmCSk2nDDNSJ435W60W59Q9yptLR05i7jNrPgAUjC5ot7AmNrKXl/IvXdg==", "session"=>{"studentID"=>"27174276", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mStudent Load (1.0ms)[0m  [1mSELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1  [["studentID", "27174276"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1[0m  [["studentID", "27174276"]]
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 481ms (Views: 462.0ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-03 23:05:15 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jr0ERb3FdcbFuEN0hb5/nYMIsD+RpjKlvNkJ9TjWWXOFymhTcd4sIpBpW8Gy9W0Bv/IRbYAFvj6iHG8cENRtew==", "session"=>{"studentID"=>"27174276", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1[0m  [["studentID", "27174276"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1  [["studentID", "27174276"]]
+Redirected to 
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `student_url' for #<SessionsController:0xa1c4fc0>):
+  app/controllers/sessions_controller.rb:11:in `create'
+
+
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (85.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (84.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (188.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 23:06:42 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 457ms (Views: 456.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 23:06:44 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 443ms (Views: 442.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for ::1 at 2015-11-03 23:06:52 -0500
+
+ActionController::RoutingError (No route matches [POST] "/"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  c:/row/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  c:/row/Ruby21/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  c:/row/Ruby21/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (129.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (86.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/row/Ruby21/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (190.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 23:14:37 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 712ms (Views: 688.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 23:14:40 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 451ms (Views: 451.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-03 23:14:47 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vNv8yGhKX/aeL220pCX7wJcLm7opy+ptoQiFMMcO0z23rJDepFEGEsv+dQGTbulcq/E66DhoZva/zePZ7wznNQ==", "session"=>{"studentID"=>"27174276", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mStudent Load (1.0ms)[0m  SELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1[0m  [["studentID", "27174276"]]
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 426ms (Views: 389.0ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-03 23:14:56 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8KuK3JkJAlWL36vIAIh2MwwYWbLWykaHFi8OFnveEmH73ObKVRJbsd4Os303w2SvMOL44MdpyhwI6mj/U9wmaQ==", "session"=>{"studentID"=>"27174276", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mStudent Load (1.0ms)[0m  SELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1[0m  [["studentID", "27174276"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 23:14:56 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 392ms (Views: 391.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 23:17:25 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 380ms (Views: 379.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 23:17:27 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 376ms (Views: 376.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-03 23:17:34 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LwrcwEOHLg08IKAgm6kVIWIHJgfehOuKDgquZc2yfh0kfbDWj5x36WnxuJWs4ge9Xv2HVc8nZxEQz8iM5bBKFQ==", "session"=>{"studentID"=>"27174276", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mStudent Load (0.0ms)[0m  SELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1[0m  [["studentID", "27174276"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 26ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 23:17:34 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 391ms (Views: 391.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-11-03 23:17:36 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 384ms (Views: 384.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-11-03 23:17:42 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"907Szy9UCjitkNCblc9I8Ihmliz0cEayNQrhcptPuKr8Ob7Z409T3PhByC6ihFpstJw3fuXTyikrz4ebs02Mog==", "session"=>{"studentID"=>"27174276", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[35mStudent Load (1.0ms)[0m  SELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `students`.* FROM `students` WHERE `students`.`studentID` = 27174276 LIMIT 1[0m  [["studentID", "27174276"]]
+  Rendered sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 402ms (Views: 398.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 23:17:43 -0500
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 408ms (Views: 408.0ms | ActiveRecord: 0.0ms)
