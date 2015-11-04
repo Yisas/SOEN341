@@ -22,7 +22,11 @@
        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li class="active">
+            <% if logged_in? %>
+            <%= link_to "Signout", logout_path  %>
+            <% else %>
             <%= link_to "Login", login_path %>
+            <% end %>
           </li>
           <li class="dropdown">
            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Consult Skynet<strong class="caret"></strong></a>
@@ -77,10 +81,7 @@
 <div class="relative-to-header">
   <%= yield %>
 </div>
-  <div style="position:absolute, bottom:0">
-    <p>Hey<p>
       <%= debug(params) if Rails.env.development? %>
-    </div>
 </div>
 </div>
 </div>
