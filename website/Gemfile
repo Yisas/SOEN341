@@ -9,6 +9,8 @@ gem 'mysql2', '~> 0.3.13'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sass-rails', '>= 3.2'
 
+#Gemfile for excel seeds links
+gem 'heart_seed'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
