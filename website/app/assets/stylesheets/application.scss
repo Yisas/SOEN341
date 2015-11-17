@@ -11,12 +11,14 @@
  * file per style scope.
  *
  */
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "fullcalendar";
 
 div.relative-to-header {
-	position: relative;
-   top: 50px;
+  position: relative;
+  top: 50px;
 }
 
 @mixin box_sizing {

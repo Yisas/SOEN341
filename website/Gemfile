@@ -8,6 +8,9 @@ gem 'mysql2', '~> 0.3.13'
 
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sass-rails', '>= 3.2'
+#testing fullcallendar
+gem 'momentjs-rails'
+gem 'fullcalendar-bootstrap-rails'
 
 #Gemfile for excel seeds links
 gem 'heart_seed'
