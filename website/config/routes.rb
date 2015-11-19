@@ -11,5 +11,6 @@
   	post   'login'   => 'sessions#create'
   	get 'logout'  => 'sessions#destroy'
     get 'timetableread' => 'timetable#read'
+    get 'preferences' => 'students#preferences'
 	  
 	end

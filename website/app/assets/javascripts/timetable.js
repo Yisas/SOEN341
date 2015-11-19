@@ -9,6 +9,10 @@ $(document).ready(function() {
             // put your options and callbacks here
 
             selectable: true,
+            slotEventOverlap:false,
+            columnFormat:'ddd',
+            allDaySlot:false,
+            header:false,
 
             dayClick: function(date, jsEvent, view) {
 
@@ -24,7 +28,9 @@ $(document).ready(function() {
                     title: 'Unavailable',
                     start: date,
                     end: end_date,
-                    editable:true
+                    editable:true,
+                    overlap: false,
+                    backgroundColor: 'red'
                 };
 
                 $('#calendar').fullCalendar('renderEvent', newEvent , 'stick');
