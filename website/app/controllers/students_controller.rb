@@ -4,4 +4,5 @@ class StudentsController < ApplicationController
 
   def preferences
   end
+
 end
