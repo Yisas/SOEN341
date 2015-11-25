@@ -10,8 +10,7 @@ module StudentsHelper
     num_of_opt=6
     termString=nextTerm(DateTime.now)
     year= DateTime.now.year.to_i
-    tmp = "<li><a tabindex=""-1"" href=""#"">" + termString + "</a></li>"
-    #$semestersArray.push(termString)
+    tmp = "<li><a tabindex=""-1"" href=\"javascript:semesterSubmenuClick(\'" + termString +  "\')\"> " + termString + "</a></li>"
     num_of_opt-=1
 
     while num_of_opt>=0 do
@@ -22,8 +21,7 @@ module StudentsHelper
         year+=1
       end
 
-      tmp += "<li><a tabindex=""-1"" href=""#"">" + termString  + "</a></li>"
-      #$semestersArray.push(termString)
+      tmp += "<li><a tabindex=""-1"" href=\"javascript:semesterSubmenuClick(\'" + termString +  "\')\"> " + termString  + "</a></li>"
       num_of_opt-=1
     end
     tmp.html_safe

@@ -1,18 +1,17 @@
   <%= stylesheet_link_tag    'students', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag "students" %>
-  <%= @displayFullPreferencesForm %>
   <div class="row">
     <div class="col-lg-6">
-      <%= form_tag("/semesterSelection", method: "post") do %>
+      <%= form_tag("/semesterSelection", method: "get", id:"semesterSelection") do %>
           <%= label_tag(:semesterInput, "Select a semester to set preferences for:") %>
           <div class="input-group">
             <div class="input-group-btn">
-              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Semester <span class="caret"></span></button>
+              <button type="button" onclick="semesterClick()" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Semester <span class="caret"></span></button>
               <ul class="dropdown-menu">
                 <%= semesters -%>
               </ul>
             </div><!-- /btn-group -->
-            <%= text_field_tag :semesterInput, '' ,class:'form-control typeahead', placeholder:'Choose or type a semester', maxlength:'60' %>
+            <%= text_field_tag :semesterInput, '' ,class:'form-control typeahead', placeholder:'Choose or type a semester', value:@semesterSelection  %>
           </div><!-- /input-group -->
       <% end %>
 

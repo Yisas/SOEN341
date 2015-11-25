@@ -11,8 +11,9 @@ class StudentsController < ApplicationController
 
   def processSemesterSelection
     @displayFullPreferencesForm= true
+    @semesterSelection= params[:semesterInput]
     render :preferences
-    flash.now[:danger] = "Hi"
+    #flash.now[:danger] = "Hi"
   end
 
 end
