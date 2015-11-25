@@ -12,5 +12,6 @@
   	get 'logout'  => 'sessions#destroy'
     get 'timetableread' => 'timetable#read'
     get 'preferences' => 'students#preferences'
+    post 'semesterSelection' => 'students#processSemesterSelection'
 	  
 	end
