@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20151113201253) do
     t.boolean  "engineer_required"
     t.datetime "created_at",                                            null: false
     t.datetime "updated_at",                                            null: false
-    t.integer  "student_id",        limit: 4
   end
 
   create_table "students", force: :cascade do |t|
