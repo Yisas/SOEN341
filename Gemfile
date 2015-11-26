@@ -45,6 +45,9 @@ gem 'coffee-script-source', '1.8.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+#heroku told me to add this
+gem 'pg'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
