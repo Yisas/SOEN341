@@ -13,6 +13,7 @@ $(document).ready(function() {
             columnFormat:'ddd',
             allDaySlot:false,
             header:false,
+            minTime: '06:00:00',
 
             dayClick: function(date, jsEvent, view) {
 

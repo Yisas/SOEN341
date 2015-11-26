@@ -13,5 +13,6 @@
     get 'timetableread' => 'timetable#read'
     get 'preferences' => 'students#preferences'
     get 'semesterSelection' => 'students#processSemesterSelection'
+    get 'testCourseDisplay' => 'timetable#courseDisplayStatic'
 	  
 	end
