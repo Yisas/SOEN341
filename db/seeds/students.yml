@@ -1,0 +1,31 @@
+---
+students_1:
+  id: 1
+  name: 'Jesus '
+  studentID: 27174276
+  password: asd
+students_2:
+  id: 2
+  name: Frances
+  studentID: 27174277
+  password: asd
+students_3:
+  id: 3
+  name: Eric
+  studentID: 27174278
+  password: asd
+students_4:
+  id: 4
+  name: Max
+  studentID: 27174279
+  password: asd
+students_5:
+  id: 5
+  name: John
+  studentID: 27174280
+  password: asd
+students_6:
+  id: 6
+  name: Aley
+  studentID: 27174281
+  password: asd
