@@ -3,8 +3,6 @@ class Student < ActiveRecord::Base
 	validates(:password, presence: true)
 	validates(:studentID, presence: true, uniqueness: true)
 
-	has_many :courses, dependent: :destroy
-
 	def authenticate(studentID,password)
 		user=Student.find_by_studentID(studentID)
 
