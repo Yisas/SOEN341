@@ -1,0 +1,8 @@
+Started GET "/assets/moment.js" for 127.0.0.1 at 2015-10-07 10:20:23 -0400
+Compiled moment.js  (1ms)  (pid 93192)
+Served asset /moment.js - 200 OK (8ms)
+Started GET "/assets/moment/fr.js" for 127.0.0.1 at 2015-10-07 10:20:23 -0400
+Compiled moment/fr.js  (0ms)  (pid 93192)
+Served asset /moment/fr.js - 200 OK (4ms)
+Started GET "/assets/moment.js" for 127.0.0.1 at 2015-10-07 10:20:23 -0400
+Served asset /moment.js - 200 OK (0ms)
