@@ -47,6 +47,8 @@ gem 'coffee-script-source', '1.8.0'
 
 #heroku told me to add this
 gem 'pg'
+gem 'rails_12factor'
+ruby '2.1.7'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
