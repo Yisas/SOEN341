@@ -8,12 +8,24 @@
           <%= coursesBySemesterSubmenu -%>
         </ul>
       </div><!-- /btn-group -->
-      <%= text_field_tag :semesterInput, '' ,class:'form-control typeahead', placeholder:'Choose or type a semester', value:@courseSelection  %>
+      <%= text_field_tag :semesterInput, '' ,class:'form-control typeahead', placeholder:'Choose or type a course', value:@courseSelection  %>
+      <%=hidden_field(:semester,:semesterProcessed,:value => @semesterSelection)%>
     </div><!-- /input-group -->
 <% end %>
-
 <%= javascript_tag do %>
     //ruby is stupid about passing to javascript, passing as string and reconverting in javascript. The gsub is because javascript can't handle ruby quotes string char
     window.semestersArrayRuby = "<%=coursesArray.to_s.gsub('"', '')%>";
 <% end %>
+
+
+<!--for when a selection has been made, display section selector-->
+<%if @courseSelection %>
+
+    <!-- send data to javascript-->
+    <%= javascript_tag do %>
+    window.courseShortName = '<%=(Course.find_by course_full_name: @courseSelection).course_short_name %>';
+    <% end %>
+
+    <%flash.now[:danger]= (Section.find_by course_id: (Course.find_by course_full_name: @courseSelection).id)%>
+    <%end %>
 <%= render "courseDisplay" %>

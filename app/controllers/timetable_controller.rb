@@ -11,7 +11,7 @@ class TimetableController < ApplicationController
 
   def processCourseSelection
     @courseSelection= params[:semesterInput]
-    @semesterSelection = @semesterSelection
+    @semesterSelection = params[:semester][:semesterProcessed]
     render :courseDisplay
     #flash.now[:danger] = "Hi"
   end

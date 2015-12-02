@@ -18,6 +18,31 @@ $(document).ready(function() {
             minTime: '06:00:00',
             hiddenDays: [ 6, 0 ]
 
+
+
         })
         .fullCalendar('changeView','agendaWeek');
+
 });
+
+function addNewEvent(){
+
+    var end_date= moment();
+    end_date.add(30,'minutes');
+
+        var newEvent = {
+            title: courseShortName,
+            start: moment(),
+            end: end_date,
+            editable: true,
+            overlap: false,
+            backgroundColor: 'red'
+        };
+
+
+    $('#calendar').fullCalendar('renderEvent', newEvent , true);
+    $('#calendar').fullCalendar( 'rerenderEvents' );
+
+
+}
+
