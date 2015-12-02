@@ -28,7 +28,7 @@ class DatabaseSqlDump < ActiveRecord::Migration
     end
 
     create_table "courses", primary_key: "course_id", force: :cascade do |t|
-      t.string "course_short_name",   limit: 10,  null: false
+      t.string "short_name",   limit: 10,  null: false
       t.string "course_full_name",    limit: 255, null: false
       t.float  "course_credit_value", limit: 53,  null: false
       t.string "course_description",  limit: 500, null: false
