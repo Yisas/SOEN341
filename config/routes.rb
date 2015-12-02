@@ -16,5 +16,6 @@
     get 'testCourseDisplay' => 'timetable#courseDisplayStatic'
 		get 'courseDisplay' => 'timetable#courseDisplay'
     post 'courseSelection' => 'timetable#processCourseSelection'
+    post 'sectionSelection' => 'timetable#processSectionSelection'
 	  
 	end

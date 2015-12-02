@@ -28,7 +28,7 @@ $(document).ready(function() {
 function addNewEvent(){
 
     var end_date= moment();
-    end_date.add(30,'minutes');
+    end_date.add(90,'minutes');
 
         var newEvent = {
             title: courseShortName,
@@ -36,7 +36,7 @@ function addNewEvent(){
             end: end_date,
             editable: true,
             overlap: false,
-            backgroundColor: 'red'
+            backgroundColor: 'blue'
         };
 
 

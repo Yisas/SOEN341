@@ -90,6 +90,15 @@ module StudentsHelper
 
 
 
+  def sectionsFormCourseSubmenu(course)
+
+    tmp = ""
+    Section.where("course_id="+ course.id.to_s).find_each do |s|
+      tmp += "<li><a tabindex=""-1"" href=\"javascript:submenuClick(\'" + s.section_name +  "\','sectionInput','sectionSelection')\"> "  + s.section_name + ": " + s.section_timeblock_summary +  "</a></li>"
+    end
+    tmp.html_safe
+  end
+
   #TODO to_lowercase and error handling if it's gonna be used anywhere else (maybe even move to application controller)
   def nextTermString(strInput,year)
     if strInput=="Winter"

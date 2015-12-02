@@ -55,6 +55,13 @@ function semesterSubmenuClick(semesterText){
 
 }
 
+
+function submenuClick(text,inputID,formID){
+    document.getElementById(inputID).value=text;
+    document.getElementById(formID).submit();
+
+}
+
 //For having the form input with the enter key.
 
 $(function() {

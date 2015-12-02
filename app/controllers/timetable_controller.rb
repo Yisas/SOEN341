@@ -1,4 +1,7 @@
 class TimetableController < ApplicationController
+
+
+
   def read
   end
 
@@ -6,14 +9,18 @@ class TimetableController < ApplicationController
   end
 
   def courseDisplay
-    @semesterSelection= params[:semester][:semesterInput]
+    session[:semester]= params[:semester][:semesterInput]
   end
 
   def processCourseSelection
-    @courseSelection= params[:semesterInput]
-    @semesterSelection = params[:semester][:semesterProcessed]
+    session[:course]= params[:semesterInput]
     render :courseDisplay
-    #flash.now[:danger] = "Hi"
+  end
+
+  def processSectionSelection
+    session[:section]=params[:sectionInput]
+    @addEvent=true
+    render :courseDisplay
   end
 
 end
