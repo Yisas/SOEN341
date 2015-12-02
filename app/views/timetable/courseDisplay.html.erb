@@ -18,7 +18,7 @@
 
     <!-- send data to javascript-->
     <%= javascript_tag do %>
-        window.courseShortName = '<%=(Course.find_by course_full_name: session[:course]).course_short_name %>';
+        window.courseShortName = '<%=(Course.find_by course_full_name: session[:course]).short_name %>';
     <% end %>
 
     <%= form_tag("/sectionSelection", method: "post", id:"sectionSelection") do %>
