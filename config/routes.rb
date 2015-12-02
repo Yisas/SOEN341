@@ -14,5 +14,7 @@
     get 'preferences' => 'students#preferences'
     get 'semesterSelection' => 'students#processSemesterSelection'
     get 'testCourseDisplay' => 'timetable#courseDisplayStatic'
+		get 'courseDisplay' => 'timetable#courseDisplay'
+    post 'courseSelection' => 'timetable#processCourseSelection'
 	  
 	end

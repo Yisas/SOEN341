@@ -45,6 +45,9 @@ gem 'coffee-script-source', '1.8.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+#for seeds from sql
+gem 'seed_dump'
+
 #heroku told me to add this
 gem 'pg'
 gem 'rails_12factor'

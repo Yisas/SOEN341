@@ -1,0 +1,19 @@
+<%= javascript_include_tag "students"%>
+<%= form_tag("/courseSelection", method: "post", id:"semesterSelection") do %>
+    <%= label_tag(:semesterInput, "Select a course to add to this term:") %>
+    <div class="input-group">
+      <div class="input-group-btn">
+        <button type="button" onclick="semesterClick()" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <%= coursesBySemesterSubmenu -%>
+        </ul>
+      </div><!-- /btn-group -->
+      <%= text_field_tag :semesterInput, '' ,class:'form-control typeahead', placeholder:'Choose or type a semester', value:@courseSelection  %>
+    </div><!-- /input-group -->
+<% end %>
+
+<%= javascript_tag do %>
+    //ruby is stupid about passing to javascript, passing as string and reconverting in javascript. The gsub is because javascript can't handle ruby quotes string char
+    window.semestersArrayRuby = "<%=coursesArray.to_s.gsub('"', '')%>";
+<% end %>
+<%= render "courseDisplay" %>

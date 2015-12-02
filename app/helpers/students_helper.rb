@@ -66,6 +66,30 @@ module StudentsHelper
     end
   end
 
+
+  def coursesBySemesterSubmenu
+    @courses= Course.all  #TODO replace this with possible courses
+    tmp = ""
+    @courses.each do |c|
+    tmp += "<li><a tabindex=""-1"" href=\"javascript:semesterSubmenuClick(\'" + c.course_full_name +  "\')\"> " + c.course_full_name  + "</a></li>"
+    end
+    tmp.html_safe
+  end
+
+  def coursesArray
+    coursesArr= []
+    @courses= Course.all  #TODO replace this with possible courses
+
+    @courses.each do |c|
+      coursesArr.push(c.course_full_name)
+    end
+
+    #ruby is stupid about passing to javascript, passing as string and reconverting in javascript
+    coursesArr.join(",")
+  end
+
+
+
   #TODO to_lowercase and error handling if it's gonna be used anywhere else (maybe even move to application controller)
   def nextTermString(strInput,year)
     if strInput=="Winter"
