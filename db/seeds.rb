@@ -592,7 +592,14 @@ Section.create!([
 Student.create!([
   {student_id: 1, name: "Jesus", studentID: 27174276, password: "password", email: "test@test.com"},
   {student_id: 2, name: "Frances", studentID: 27326696, password: "password", email: "test@test.com"},
-  {student_id: 3, name: "Test", studentID: 123123123, password: "qweqwe", email: "test@test.com"}
+  {student_id: 3, name: "Maxime", studentID: 29569391, password: "password", email: "test@test.com"},
+  {student_id: 4, name: "Mohammad-Ali", studentID: 27427611, password: "password", email: "test@test.com"},
+  {student_id: 5, name: "Eric", studentID: 26624642, password: "password", email: "test@test.com"},
+  {student_id: 6, name: "Emir", studentID: 26424724, password: "password", email: "test@test.com"},
+  {student_id: 7, name: "Nikolas", studentID: 27189877, password: "password", email: "test@test.com"},
+  {student_id: 8, name: "Syrine", studentID: 29773118, password: "password", email: "test@test.com"},
+  {student_id: 9, name: "Maria", studentID: 27209193, password: "password", email: "test@test.com"},
+  {student_id: 10, name: "Leo", studentID: 27036736, password: "password", email: "test@test.com"}
 ])
 Timeblock.create!([
   {timeblock_id: 1, section_id: 1, timeblock_day: 0, timeblock_hour: 16, timeblock_minute: 30, timeblock_duration: 150, loyola_campus: false, timeblock_label: 0},
