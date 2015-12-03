@@ -27,15 +27,23 @@ $(document).ready(function() {
 
 function addNewEvent(){
 
-    var end_date= moment();
-    end_date.add(90,'minutes');
+    var start_date= moment().startOf('week');
+
+  //since start of day happens to be sunday
+  start_date.add(1440,'minutes');
+
+    start_date.add(1440 * timeblockDay,'minutes');
+    start_date.add(60 * timeblockHour,'minutes');
+    start_date.add(timeblockMinute,'minutes');
+    var end_date= start_date.clone();
+    end_date.add(timeblockDuration,'minutes');
 
         var newEvent = {
-            title: courseShortName,
-            start: moment(),
+            title: courseShortName + "\nSection: " + sectionName,
+            start: start_date,
             end: end_date,
-            editable: true,
-            overlap: false,
+            editable: false,
+            overlap: true,
             backgroundColor: 'blue'
         };
 

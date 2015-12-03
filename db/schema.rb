@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151202194933) do
+ActiveRecord::Schema.define(version: 20151203000024) do
 
   create_table "course_coursegroup_relationships", id: false, force: :cascade do |t|
     t.integer "course_id",              limit: 4, null: false
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20151202194933) do
   end
 
   create_table "courses", primary_key: "course_id", force: :cascade do |t|
-    t.string "short_name",   limit: 10,  null: false
+    t.string "short_name",          limit: 10,  null: false
     t.string "course_full_name",    limit: 255, null: false
     t.float  "course_credit_value", limit: 53,  null: false
     t.string "course_description",  limit: 500, null: false

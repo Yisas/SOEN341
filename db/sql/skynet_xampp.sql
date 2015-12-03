@@ -58,7 +58,7 @@ INSERT INTO `coursegroups` (`coursegroup_id`, `coursegroup_name`, `coursegroup_c
 
 CREATE TABLE IF NOT EXISTS `courses` (
   `course_id` int(11) NOT NULL,
-  `course_short_name` varchar(10) NOT NULL,
+  `short_name` varchar(10) NOT NULL,
   `course_full_name` varchar(255) NOT NULL,
   `course_credit_value` double(4,2) NOT NULL,
   `course_description` varchar(500) NOT NULL,
@@ -69,7 +69,7 @@ CREATE TABLE IF NOT EXISTS `courses` (
 -- Dumping data for table `courses`
 --
 
-INSERT INTO `courses` (`course_id`, `course_short_name`, `course_full_name`, `course_credit_value`, `course_description`) VALUES
+INSERT INTO `courses` (`course_id`, `short_name`, `course_full_name`, `course_credit_value`, `course_description`) VALUES
 (1, 'SOEN228', 'System Hardware', 4.00, 'Social history of technology and of science including the industrial revolution and modern times. Engineering and scientific creativity, social and environmental problems created by uncontrolled technology, appropriate technology.'),
 (2, 'SOEN287', 'Web Programming', 3.00, 'Processor structure, Data and Instructions, Instruction Set Processor (ISP) level view of computer hardware, assembly language level use. Memory systems â€” RAM and disks, hierarchy of memories. I/O organization, I/O devices and their diversity, their interconnection to CPU and Memory. Communication between computers at the physical level. Networks and computers.'),
 (3, 'SOEN321', 'Information Systems Security', 3.00, 'Internet architecture and protocols. Web applications through clients and servers. Markup languages. Client-side programming using scripting languages. Static website contents and dynamic page generation through server-side programming. Preserving state (client-side) in web applications.'),

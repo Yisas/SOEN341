@@ -36,6 +36,15 @@
 
 <%end %>
 
+<% if session[:section] %>
+    <%= javascript_tag do %>
+        window.sectionName = '<%= session[:section] %>';
+        window.timeblockDay = '<%= (Timeblock.find_by section_id: (Section.find_by section_name:session[:section], course_id:(Course.find_by course_full_name: session[:course]).id).id).timeblock_day %>';
+        window.timeblockHour = '<%= (Timeblock.find_by section_id: (Section.find_by section_name:session[:section], course_id:(Course.find_by course_full_name: session[:course]).id).id).timeblock_hour %>';
+        window.timeblockMinute = '<%= (Timeblock.find_by section_id: (Section.find_by section_name:session[:section], course_id:(Course.find_by course_full_name: session[:course]).id).id).timeblock_minute %>';
+        window.timeblockDuration = '<%= (Timeblock.find_by section_id: (Section.find_by section_name:session[:section], course_id:(Course.find_by course_full_name: session[:course]).id).id).timeblock_duration %>';
+    <% end %>
+<% end %>
 
 
 <%= javascript_tag do %>

@@ -14,6 +14,7 @@ class TimetableController < ApplicationController
 
   def processCourseSelection
     session[:course]= params[:semesterInput]
+    session[:section]= nil
     render :courseDisplay
   end
 
