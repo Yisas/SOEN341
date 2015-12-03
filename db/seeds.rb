@@ -591,7 +591,7 @@ Section.create!([
 ])
 Student.create!([
   {student_id: 1, name: "Jesus", studentID: 27174276, password: "password", email: "test@test.com"},
-  {student_id: 2, name: "Frances", studentID: 5252525, password: "password", email: "test@test.com"},
+  {student_id: 2, name: "Frances", studentID: 27326696, password: "password", email: "test@test.com"},
   {student_id: 3, name: "Test", studentID: 123123123, password: "qweqwe", email: "test@test.com"}
 ])
 Timeblock.create!([

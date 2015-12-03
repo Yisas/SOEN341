@@ -17,7 +17,6 @@ class StudentsController < ApplicationController
     @displayFullPreferencesForm= true
     @semesterSelection= params[:semesterInput]
     render :preferences
-    #flash.now[:danger] = "Hi"
   end
 
 end
