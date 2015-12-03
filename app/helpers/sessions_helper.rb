@@ -13,7 +13,7 @@ def current_user
   end
 
   def log_out
-    session.delete
+    session.delete(:studentID)
     @current_user = nil
   end
 end
