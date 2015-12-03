@@ -37,6 +37,13 @@
 <%end %>
 
 <% if session[:section] %>
+    <%
+      timeblocks = []
+      Timeblock.where("section_id=" + ((Section.find_by section_name:session[:section], course_id:(Course.find_by course_full_name: session[:course]).id).id).to_s).find_each do |t|
+      timeblocks.push(t)
+       end
+      flash.now[:danger]=timeblocks;
+    %>
     <%= javascript_tag do %>
         window.sectionName = '<%= session[:section] %>';
         window.timeblockDay = '<%= (Timeblock.find_by section_id: (Section.find_by section_name:session[:section], course_id:(Course.find_by course_full_name: session[:course]).id).id).timeblock_day %>';
@@ -44,6 +51,7 @@
         window.timeblockMinute = '<%= (Timeblock.find_by section_id: (Section.find_by section_name:session[:section], course_id:(Course.find_by course_full_name: session[:course]).id).id).timeblock_minute %>';
         window.timeblockDuration = '<%= (Timeblock.find_by section_id: (Section.find_by section_name:session[:section], course_id:(Course.find_by course_full_name: session[:course]).id).id).timeblock_duration %>';
     <% end %>
+    <h3>Frances could you please check the data? What you see above in red is a collection of the timeblocks that adhere to this section. It's different than what is in the summary and has more data entries for some reason. Only the first timeblock was added</h3>
 <% end %>
 
 
