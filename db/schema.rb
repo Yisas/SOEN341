@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151203000024) do
+ActiveRecord::Schema.define(version: 20151204203736) do
 
   create_table "course_coursegroup_relationships", id: false, force: :cascade do |t|
     t.integer "course_id",              limit: 4, null: false
@@ -122,8 +122,6 @@ ActiveRecord::Schema.define(version: 20151203000024) do
     t.integer "term_order",               limit: 4,  null: false
     t.boolean "flag_200_levels_complete",            null: false
   end
-
-  add_index "student_terms", ["sequence_id"], name: "generated_sequence_otm_student_terms", using: :btree
 
   create_table "students", primary_key: "student_id", force: :cascade do |t|
     t.string  "name",      limit: 30

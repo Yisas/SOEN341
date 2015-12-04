@@ -1,15 +1,12 @@
 <%= javascript_include_tag "timetableStatic" %>
 
 <div class="row">
-    <div class="col-md-8"><h1>Schedule for <%= params[:semester][:semesterInput] %>:</h1></div>
-    <div class="col-md-4">
+  <div class="col-md-8"><h1>Schedule for <%= nextTerm(DateTime.now()) %>:</h1></div>
+  <div class="col-md-4">
        <span class="pull-right">
       <%= link_to "Next Semester", semesterSelection_path, :class=>"btn btn-danger btn-arrow-right" , :id => 'doneButton', style: "position: relative;top: 20px"%>
         </span>
-
-    </div>
+  </div>
 </div>
-
-
 
 <div id='calendar'></div>

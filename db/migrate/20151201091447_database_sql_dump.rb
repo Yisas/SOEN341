@@ -83,33 +83,6 @@ class DatabaseSqlDump < ActiveRecord::Migration
 
     add_index "student_program_relationships", ["program_id"], name: "program_otm_student_program_relationships", using: :btree
 
-    create_table "student_term_section_relationships", id: false, force: :cascade do |t|
-      t.integer "term_id",    limit: 4, null: false
-      t.integer "section_id", limit: 4, null: false
-    end
-
-    add_index "student_term_section_relationships", ["section_id"], name: "section_otm_student_term_section_relationships", using: :btree
-
-    create_table "student_terms", primary_key: "term_id", force: :cascade do |t|
-      t.integer "sequence_id",              limit: 4,  null: false
-      t.float   "min_term_credit",          limit: 53
-      t.float   "max_term_credit",          limit: 53
-      t.float   "actual_term_credit",       limit: 53, null: false
-      t.integer "term_year",                limit: 4,  null: false
-      t.integer "term_semester",            limit: 4,  null: false
-      t.integer "term_order",               limit: 4,  null: false
-      t.boolean "flag_200_levels_complete",            null: false
-    end
-
-    add_index "student_terms", ["sequence_id"], name: "generated_sequence_otm_student_terms", using: :btree
-
-    create_table "students", primary_key: "student_id", force: :cascade do |t|
-      t.string   "name",       limit: 30
-      t.integer  "studentID",  limit: 4
-      t.string "password", limit: 255, null: false
-      t.string "email",    limit: 255, null: false
-    end
-
     create_table "timeblocks", primary_key: "timeblock_id", force: :cascade do |t|
       t.integer "section_id",         limit: 4, null: false
       t.integer "timeblock_day",      limit: 4, null: false

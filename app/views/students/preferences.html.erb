@@ -8,7 +8,7 @@
             <div class="input-group-btn">
               <button type="button" onclick="semesterClick()" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Semester <span class="caret"></span></button>
               <ul class="dropdown-menu">
-                <%= semesters -%>
+                <%= semesters("semesterSubmenuClick") -%>
               </ul>
             </div><!-- /btn-group -->
             <%= text_field_tag :semesterInput, '' ,class:'form-control typeahead', placeholder:'Choose or type a semester', value:@semesterSelection  %>

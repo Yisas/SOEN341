@@ -1,19 +1,38 @@
 <%= javascript_include_tag "timetableCourseDisplay" %>
 
 <div class="row">
-  <div class="col-md-8"><h1>Schedule for <%= session[:semester] %>:</h1></div>
+  <div class="col-md-8"><h1>Schedule for
+		<%=
+				if session[:semester]
+					session[:semester]
+					else
+						nextTerm(DateTime.now())
+					end
+		%>:</h1></div>
   <div class="col-md-4">
-       <span class="pull-right">
-      <%= link_to "Next Semester", semesterSelection_path, :class=>"btn btn-danger btn-arrow-right" , :id => 'doneButton', style: "position: relative;top: 20px"%>
-        </span>
-    <%if @addEvent %>
-      <script>
-        $(window).load(function() {
-          // executes when complete page is fully loaded, including all frames, objects and images
-          addNewEvent();
-        });
-        </script>
-        <%end%>
+			 <span class="pull-right">
+			<%= link_to "Next Semester", semesterSelection_path, :class=>"btn btn-danger btn-arrow-right" , :id => 'doneButton', style: "position: relative;top: 20px"%>
+				</span>
+
+    <% if session[:section] && @addEvent %>
+        <%
+           timeblocks = []
+           Timeblock.where("section_id=" + ((Section.find_by section_name:session[:section], course_id:(Course.find_by course_full_name: session[:course]).id).id).to_s).find_each do |t|
+             timeblocks.push(t)
+
+        %>
+            <%= javascript_tag do %>
+                $(window).load(function() {
+                window.sectionName = '<%= session[:section] %>';
+                window.timeblockDay = '<%= t.timeblock_day %>';
+                window.timeblockHour = '<%= t.timeblock_hour %>';
+                window.timeblockMinute = '<%= t.timeblock_minute %>';
+                window.timeblockDuration = '<%= t.timeblock_duration %>';
+                addNewEvent();
+                });
+            <% end
+               end%>
+    <% end %>
   </div>
 </div>
 

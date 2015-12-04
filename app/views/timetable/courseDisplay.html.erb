@@ -1,17 +1,19 @@
 <%= javascript_include_tag "students"%>
-<%= form_tag("/courseSelection", method: "post", id:"semesterSelection") do %>
-    <%= label_tag(:semesterInput, "Select a course to add to this term:") %>
+<div class="col-md-4">
+<%= form_tag("/courseSelection", method: "post", id:"courseSelection") do %>
+    <%= label_tag(:courseInput, "Select a course to add to this term:") %>
     <div class="input-group">
       <div class="input-group-btn">
         <button type="button" onclick="semesterClick()" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses <span class="caret"></span></button>
         <ul class="dropdown-menu">
-          <%= coursesBySemesterSubmenu -%>
+          <%= coursesBySemesterSubmenu("submenuClick","courseInput","courseSelection") -%>
         </ul>
       </div><!-- /btn-group -->
-      <%= text_field_tag :semesterInput, '' ,class:'form-control typeahead', placeholder:'Choose or type a course', value:session[:course]  %>
-      <%=hidden_field(:semester,:semesterProcessed,:value => session[:semester])%>
+      <%= text_field_tag :courseInput, '' ,class:'form-control typeahead', placeholder:'Choose or type a course', value:session[:course]  %>
     </div><!-- /input-group -->
 <% end %>
+</div><!-- /.col-md-4 -->
+
 
 <!--for when a selection has been made, display section selector-->
 <%if session[:course] %>
@@ -20,9 +22,9 @@
     <%= javascript_tag do %>
         window.courseShortName = '<%=(Course.find_by course_full_name: session[:course]).short_name %>';
     <% end %>
-
+    <div class="col-md-4">
     <%= form_tag("/sectionSelection", method: "post", id:"sectionSelection") do %>
-        <%= label_tag(:semesterInput, "Select a section for this course:") %>
+        <%= label_tag(:sectionInput, "Select a section for this course:") %>
         <div class="input-group">
           <div class="input-group-btn">
             <button type="button" onclick="semesterClick()" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sections <span class="caret"></span></button>
@@ -32,27 +34,29 @@
           </div><!-- /btn-group -->
           <%= text_field_tag :sectionInput,'' , class:'form-control',placeholder: 'Choose a section to display its timeblock', value: session[:section] %>
         </div><!-- /input-group -->
+          </div><!-- /.col-md-4 -->
     <%end%>
 
 <%end %>
 
-<% if session[:section] %>
-    <%
-      timeblocks = []
-      Timeblock.where("section_id=" + ((Section.find_by section_name:session[:section], course_id:(Course.find_by course_full_name: session[:course]).id).id).to_s).find_each do |t|
-      timeblocks.push(t)
-       end
-      flash.now[:danger]=timeblocks;
-    %>
-    <%= javascript_tag do %>
-        window.sectionName = '<%= session[:section] %>';
-        window.timeblockDay = '<%= (Timeblock.find_by section_id: (Section.find_by section_name:session[:section], course_id:(Course.find_by course_full_name: session[:course]).id).id).timeblock_day %>';
-        window.timeblockHour = '<%= (Timeblock.find_by section_id: (Section.find_by section_name:session[:section], course_id:(Course.find_by course_full_name: session[:course]).id).id).timeblock_hour %>';
-        window.timeblockMinute = '<%= (Timeblock.find_by section_id: (Section.find_by section_name:session[:section], course_id:(Course.find_by course_full_name: session[:course]).id).id).timeblock_minute %>';
-        window.timeblockDuration = '<%= (Timeblock.find_by section_id: (Section.find_by section_name:session[:section], course_id:(Course.find_by course_full_name: session[:course]).id).id).timeblock_duration %>';
-    <% end %>
-    <h3>Frances could you please check the data? What you see above in red is a collection of the timeblocks that adhere to this section. It's different than what is in the summary and has more data entries for some reason. Only the first timeblock was added</h3>
+
+
+<div class="col-md-4">
+  <div class="text-right">
+<%= form_tag("/courseDisplayGoToSemester", method: "post", id:"semesterSelection") do %>
+    <%= label_tag(:semesterInput, "Go to semester:") %>
+    <div class="input-group">
+      <div class="input-group-btn">
+        <button type="button" onclick="semesterClick()" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <%= semesters("semesterSubmenuClick") -%>
+        </ul>
+      </div><!-- /btn-group -->
+    </div><!-- /input-group -->
+    <%=hidden_field_tag(:semesterInput,'')%>
 <% end %>
+    </div>
+  </div><!-- /.col-md-4 -->
 
 
 <%= javascript_tag do %>
