@@ -113,6 +113,7 @@ ActiveRecord::Schema.define(version: 20151204203736) do
   add_index "student_term_section_relationships", ["section_id"], name: "section_otm_student_term_section_relationships", using: :btree
 
   create_table "student_terms", primary_key: "term_id", force: :cascade do |t|
+    t.integer "student_id",               limit: 4,  null: false
     t.integer "sequence_id",              limit: 4,  null: false
     t.float   "min_term_credit",          limit: 53
     t.float   "max_term_credit",          limit: 53
@@ -121,13 +122,6 @@ ActiveRecord::Schema.define(version: 20151204203736) do
     t.integer "term_semester",            limit: 4,  null: false
     t.integer "term_order",               limit: 4,  null: false
     t.boolean "flag_200_levels_complete",            null: false
-  end
-
-  create_table "students", primary_key: "student_id", force: :cascade do |t|
-    t.string  "name",      limit: 30
-    t.integer "studentID", limit: 4
-    t.string  "password",  limit: 255, null: false
-    t.string  "email",     limit: 255, null: false
   end
 
   create_table "timeblocks", primary_key: "timeblock_id", force: :cascade do |t|

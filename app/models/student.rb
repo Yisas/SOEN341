@@ -1,4 +1,5 @@
 class Student < ActiveRecord::Base
+  has_many :student_terms
 	validates(:name, presence: true, uniqueness: true)
 	validates(:password, presence: true)
 	validates(:studentID, presence: true, uniqueness: true)
