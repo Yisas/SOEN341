@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151204203736) do
+ActiveRecord::Schema.define(version: 20151204211410) do
 
   create_table "course_coursegroup_relationships", id: false, force: :cascade do |t|
     t.integer "course_id",              limit: 4, null: false
@@ -114,14 +114,22 @@ ActiveRecord::Schema.define(version: 20151204203736) do
 
   create_table "student_terms", primary_key: "term_id", force: :cascade do |t|
     t.integer "student_id",               limit: 4,  null: false
-    t.integer "sequence_id",              limit: 4,  null: false
+    t.integer "sequence_id",              limit: 4
     t.float   "min_term_credit",          limit: 53
     t.float   "max_term_credit",          limit: 53
-    t.float   "actual_term_credit",       limit: 53, null: false
+    t.float   "actual_term_credit",       limit: 53
     t.integer "term_year",                limit: 4,  null: false
-    t.integer "term_semester",            limit: 4,  null: false
-    t.integer "term_order",               limit: 4,  null: false
-    t.boolean "flag_200_levels_complete",            null: false
+    t.integer "term_semester",            limit: 4
+    t.string  "term_semester_string",     limit: 50, null: false
+    t.integer "term_order",               limit: 4
+    t.boolean "flag_200_levels_complete"
+  end
+
+  create_table "students", primary_key: "student_id", force: :cascade do |t|
+    t.string  "name",      limit: 30
+    t.integer "studentID", limit: 4
+    t.string  "password",  limit: 255, null: false
+    t.string  "email",     limit: 255, null: false
   end
 
   create_table "timeblocks", primary_key: "timeblock_id", force: :cascade do |t|
