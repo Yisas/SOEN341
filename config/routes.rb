@@ -18,5 +18,6 @@
     post 'courseSelection' => 'timetable#processCourseSelection'
     post 'sectionSelection' => 'timetable#processSectionSelection'
     post 'courseDisplayGoToSemester' => 'timetable#processTermSelection'
+    get 'nextSemesterTimetable' => 'timetable#nextSemester'
 	  
 	end

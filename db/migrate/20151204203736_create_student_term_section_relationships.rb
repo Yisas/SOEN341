@@ -1,7 +1,7 @@
 class CreateStudentTermSectionRelationships < ActiveRecord::Migration
   def change
-    create_table "student_term_section_relationships", id: false, force: :cascade do |t|
-      t.integer "term_id",    limit: 4, null: false
+    create_table "student_term_section_relationships", force: :cascade do |t|
+      t.integer "student_term_id",    limit: 4, null: false
       t.integer "section_id", limit: 4, null: false
     end
 

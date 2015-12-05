@@ -32,6 +32,8 @@ function addNewEvent(){
   //since start of day happens to be sunday
   start_date.add(1440,'minutes');
 
+
+
     start_date.add(1440 * timeblockDay,'minutes');
     start_date.add(60 * timeblockHour,'minutes');
     start_date.add(timeblockMinute,'minutes');
@@ -47,10 +49,8 @@ function addNewEvent(){
             backgroundColor: 'blue'
         };
 
-
     $('#calendar').fullCalendar('renderEvent', newEvent , true);
     $('#calendar').fullCalendar( 'rerenderEvents' );
-
 
 }
 

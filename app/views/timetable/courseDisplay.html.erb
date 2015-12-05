@@ -19,9 +19,6 @@
 <%if session[:course] %>
 
     <!-- send data to javascript-->
-    <%= javascript_tag do %>
-        window.courseShortName = '<%=(Course.find_by course_full_name: session[:course]).short_name %>';
-    <% end %>
     <div class="col-md-4">
     <%= form_tag("/sectionSelection", method: "post", id:"sectionSelection") do %>
         <%= label_tag(:sectionInput, "Select a section for this course:") %>
@@ -47,7 +44,7 @@
     <%= label_tag(:semesterInput, "Go to semester:") %>
     <div class="input-group">
       <div class="input-group-btn">
-        <button type="button" onclick="semesterClick()" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses <span class="caret"></span></button>
+        <button type="button" onclick="semesterClick()" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Semester <span class="caret"></span></button>
         <ul class="dropdown-menu">
           <%= semesters("semesterSubmenuClick") -%>
         </ul>

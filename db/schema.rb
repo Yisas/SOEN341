@@ -105,14 +105,14 @@ ActiveRecord::Schema.define(version: 20151204211410) do
 
   add_index "student_program_relationships", ["program_id"], name: "program_otm_student_program_relationships", using: :btree
 
-  create_table "student_term_section_relationships", id: false, force: :cascade do |t|
-    t.integer "term_id",    limit: 4, null: false
-    t.integer "section_id", limit: 4, null: false
+  create_table "student_term_section_relationships", force: :cascade do |t|
+    t.integer "student_term_id", limit: 4, null: false
+    t.integer "section_id",      limit: 4, null: false
   end
 
   add_index "student_term_section_relationships", ["section_id"], name: "section_otm_student_term_section_relationships", using: :btree
 
-  create_table "student_terms", primary_key: "term_id", force: :cascade do |t|
+  create_table "student_terms", force: :cascade do |t|
     t.integer "student_id",               limit: 4,  null: false
     t.integer "sequence_id",              limit: 4
     t.float   "min_term_credit",          limit: 53

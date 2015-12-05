@@ -57,4 +57,6 @@ module ApplicationHelper
     semestersArr.join(",")
   end
 
+
+
 end

@@ -1,6 +1,6 @@
 class CreateStudentTerms < ActiveRecord::Migration
   def change
-    create_table "student_terms", primary_key: "term_id", force: :cascade do |t|
+    create_table "student_terms", force: :cascade do |t|
       t.integer "student_id",               limit: 4,  null: false
       t.integer "sequence_id",              limit: 4#,  null: false this no longer follows France's schema
       t.float   "min_term_credit",          limit: 53

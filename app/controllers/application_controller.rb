@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   add_flash_types :success, :warning, :danger, :info
   protect_from_forgery with: :exception
   include SessionsHelper
-  helper_method :nextTerm
+  helper_method :nextTerm,:nextTermString
 
   #returns string with the named term (Winter,Summer,Fall) of the following semester
   def nextTerm(input)
@@ -16,6 +16,20 @@ class ApplicationController < ActionController::Base
            "Fall " + input.year.to_s
          else if (tmpMonth >=9 && tmpMonth <=12)
                 "Winter " + (input.year + 1).to_s
+              end
+         end
+    end
+  end
+
+  #TODO to_lowercase and error handling if it's gonna be used anywhere else (maybe even move to application controller)
+  def nextTermString(strInput,year)
+    if strInput=="Winter"
+      "Summer " + year.to_s
+    else if (strInput=="Summer")
+           "Fall " + year.to_s
+         else if (strInput=="Fall")
+                year+=1
+                "Winter "+ year.to_s
               end
          end
     end

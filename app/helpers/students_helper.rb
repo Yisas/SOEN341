@@ -32,19 +32,5 @@ module StudentsHelper
     tmp.html_safe
   end
 
-  #TODO to_lowercase and error handling if it's gonna be used anywhere else (maybe even move to application controller)
-  def nextTermString(strInput,year)
-    if strInput=="Winter"
-      year+=1
-      "Fall " + year.to_s
-    else if (strInput=="Fall")
-           "Summer " + year.to_s
-         else if (strInput=="Summer")
-                "Winter "+ year.to_s
-              end
-         end
-    end
-  end
-
 
 end
