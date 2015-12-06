@@ -17,7 +17,6 @@
 
 <!--for when a selection has been made, display section selector-->
 <%if session[:course] %>
-
     <!-- send data to javascript-->
     <div class="col-md-4">
     <%= form_tag("/sectionSelection", method: "post", id:"sectionSelection") do %>
@@ -39,7 +38,7 @@
 
 
 <div class="col-md-4">
-  <div class="text-right">
+  <div class="text-left">
 <%= form_tag("/courseDisplayGoToSemester", method: "post", id:"semesterSelection") do %>
     <%= label_tag(:semesterInput, "Go to semester:") %>
     <div class="input-group">
@@ -54,7 +53,6 @@
 <% end %>
     </div>
   </div><!-- /.col-md-4 -->
-
 
 <%= javascript_tag do %>
     //ruby is stupid about passing to javascript, passing as string and reconverting in javascript. The gsub is because javascript can't handle ruby quotes string char

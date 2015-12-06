@@ -16,7 +16,23 @@ $(document).ready(function() {
             allDaySlot:false,
             header:false,
             minTime: '06:00:00',
-            hiddenDays: [ 6, 0 ]
+            hiddenDays: [ 6, 0 ],
+
+          eventClick: function(calEvent, jsEvent, view) {
+
+              if ($(this).css('border-color')=='rgb(255, 0, 0)')
+              {
+                $(this).css('border-color', 'rgb(58, 135, 173)');
+              }
+              else
+              {
+                $("#clickedEvent").val($("#clickedEvent").val()+calEvent.title.replace('\nSection: ',',')+'|');
+                $(this).css('border-color', 'red');
+              }
+            end
+
+
+          }
 
 
 
@@ -46,7 +62,8 @@ function addNewEvent(){
             end: end_date,
             editable: false,
             overlap: true,
-            backgroundColor: 'blue'
+            backgroundColor: 'blue',
+            borderColor: 'rgb(58, 135, 173)'
         };
 
     $('#calendar').fullCalendar('renderEvent', newEvent , true);

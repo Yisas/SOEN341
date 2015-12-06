@@ -35,4 +35,13 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def loginCheck
+  if logged_in?
+    true
+  else
+    redirect_to root_path, danger: "You must log in first to use this function."
+    false
+  end
+    end
+
 end

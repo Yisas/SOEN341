@@ -1,7 +1,5 @@
 class TimetableController < ApplicationController
 
-
-
   def read
   end
 
@@ -9,6 +7,8 @@ class TimetableController < ApplicationController
   end
 
   def courseDisplay
+
+    if loginCheck
 
     #params[:semester] will be set when this controller is being called from the preferences page. Otherwise, default to what was on the
     #session, or the semester after the current date
@@ -20,6 +20,7 @@ class TimetableController < ApplicationController
 
     session[:course]=nil
     session[:section]=nil
+      end
   end
 
   def processCourseSelection
@@ -30,7 +31,6 @@ class TimetableController < ApplicationController
 
   def processSectionSelection
     session[:section]=params[:sectionInput]
-    @addEvent=true
 
     #create StudentTermSectionRelationship if necessary
     StudentTermSectionRelationship.validateAndCreate(session[:termID],((Section.find_by section_name:session[:section], course_id:(Course.find_by course_full_name: session[:course]).id).id))
@@ -41,6 +41,17 @@ class TimetableController < ApplicationController
   def processTermSelection
     session[:semester]=params[:semesterInput]
     termInitializationHelper
+    render :courseDisplay
+  end
+
+  def processEliminateEvent
+
+    params[:clickedEvent].split('|').each do |p|
+      @temp=StudentTermSectionRelationship.find_by student_term_id: session[:termID], section_id: (Section.find_by section_name:p.split(',',2)[1], course_id: (Course.find_by short_name: p.split(',',2)[0]).id).id
+      if !@temp.nil?
+      @temp.destroy
+       end
+    end
     render :courseDisplay
   end
 
