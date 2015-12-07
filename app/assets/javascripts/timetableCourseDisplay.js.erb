@@ -41,7 +41,9 @@ $(document).ready(function() {
 
 });
 
-function addNewEvent(){
+var colors = ['blue','rgb(0, 204, 0)','purple','orange','rgb(0, 204, 204)','brown'];
+
+function addNewEvent(index){
 
     var start_date= moment().startOf('week');
 
@@ -62,7 +64,7 @@ function addNewEvent(){
             end: end_date,
             editable: false,
             overlap: true,
-            backgroundColor: 'blue',
+            backgroundColor: colors[index % colors.length],
             borderColor: 'rgb(58, 135, 173)'
         };
 
@@ -70,4 +72,3 @@ function addNewEvent(){
     $('#calendar').fullCalendar( 'rerenderEvents' );
 
 }
-

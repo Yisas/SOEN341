@@ -1,5 +1,5 @@
 
-    <%= form_for(:preferences, url: courseDisplay_path, method: 'get') do |p| %>
+    <%= form_for(:preferences, url: testCourseDisplay_path, method: 'get') do |p| %>
         <div class="form-group">
       <%= p.label :maxCredits, 'Maximum number of credits:' %>
       <%= p.number_field :maxCredits, min:0, max:18, class: 'form-control' %>
