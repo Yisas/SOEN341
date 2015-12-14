@@ -14,6 +14,13 @@ class SessionsController < ApplicationController
       render 'new'
     end
   end
+  
+    def createDefault
+     user = Student.find(11)
+	 #flash.now[:danger]=user
+     log_in user
+     redirect_to root_path
+  end
 
     def destroy
     log_out

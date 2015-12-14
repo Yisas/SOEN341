@@ -9,6 +9,7 @@
 	 get 'help'    => 'static_pages#help'
 	 get    'login'   => 'sessions#new'
   	post   'login'   => 'sessions#create'
+	post 'testLogin' => 'sessions#createDefault'
   	get 'logout'  => 'sessions#destroy'
     get 'timetableread' => 'timetable#read'
     get 'preferences' => 'students#preferences'

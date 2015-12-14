@@ -39,7 +39,7 @@ class ApplicationController < ActionController::Base
   if logged_in?
     true
   else
-    redirect_to root_path, danger: "You must log in first to use this function."
+    redirect_to root_path, danger: "You must log in first to use this function. There is a testing login function in the login page."
     false
   end
     end

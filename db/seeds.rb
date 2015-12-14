@@ -599,7 +599,8 @@ Student.create!([
   {student_id: 7, name: "Nikolas", studentID: 27189877, password: "password", email: "test@test.com"},
   {student_id: 8, name: "Syrine", studentID: 29773118, password: "password", email: "test@test.com"},
   {student_id: 9, name: "Maria", studentID: 27209193, password: "password", email: "test@test.com"},
-  {student_id: 10, name: "Leo", studentID: 27036736, password: "password", email: "test@test.com"}
+  {student_id: 10, name: "Leo", studentID: 27036736, password: "password", email: "test@test.com"},
+  {student_id: 11, name: "Test Student", studentID: 11111111, password: "password", email: "test@test.com"}
 ])
 Timeblock.create!([
   {timeblock_id: 1, section_id: 1, timeblock_day: 0, timeblock_hour: 16, timeblock_minute: 30, timeblock_duration: 150, loyola_campus: false, timeblock_label: 0},

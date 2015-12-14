@@ -13,4 +13,8 @@
 					</div>
 					  <%= f.submit "Log in", class: "btn btn-default" %>
 			<% end %>
+			
+			<%= form_for(:session, url: testLogin_path) do |f| %>
+					  <%= f.submit "Login as Test User", class: "btn btn-default" %>
+			<% end %>
 </body>
